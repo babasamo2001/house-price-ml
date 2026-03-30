@@ -1,3 +1,4 @@
+import os
 from flask import Flask, request, jsonify, render_template
 from predict import make_prediction
 
@@ -30,5 +31,11 @@ def predict():
         return jsonify({"error": str(e)})
 
 
+# -----------------------
+# Entry point for local or Render
+# -----------------------
 if __name__ == "__main__":
-    app.run(debug=True)
+    # Render sets PORT automatically; default to 10000 for local testing
+    port = int(os.environ.get("PORT", 10000))
+    # Bind to all interfaces so Render can reach it
+    app.run(host="0.0.0.0", port=port, debug=True)
