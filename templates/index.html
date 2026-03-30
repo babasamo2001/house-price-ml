@@ -1,0 +1,89 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>House Price Predictor</title>
+    <link rel="stylesheet" href="/static/style.css">
+</head>
+
+<body>
+
+<div class="container">
+   <div class="header-section">
+    <h2>🏠 California House Price Prediction</h2>
+    <p>Enter house features to estimate the price based on California data.</p>
+</div>
+
+    <form id="prediction-form">
+
+        <div class="form-group">
+            <label for="longitude">Longitude</label>
+            <input type="number" step="any" id="longitude" name="longitude" placeholder="Longitude" required>
+        </div>
+
+        <div class="form-group">
+            <label for="latitude">Latitude</label>
+            <input type="number" step="any" id="latitude" name="latitude" placeholder="Latitude" required>
+        </div>
+
+        <div class="form-group">
+            <label for="housing_median_age">Housing Median Age</label>
+            <input type="number" step="any" id="housing_median_age" name="housing_median_age" placeholder="Housing Median Age" required>
+        </div>
+
+        <div class="form-group">
+            <label for="total_rooms">Total Rooms</label>
+            <input type="number" step="any" id="total_rooms" name="total_rooms" placeholder="Total Rooms" required>
+        </div>
+
+        <div class="form-group">
+            <label for="total_bedrooms">Total Bedrooms</label>
+            <input type="number" step="any" id="total_bedrooms" name="total_bedrooms" placeholder="Total Bedrooms" required>
+        </div>
+
+        <div class="form-group">
+            <label for="population">Population</label>
+            <input type="number" step="any" id="population" name="population" placeholder="Population" required>
+        </div>
+
+        <div class="form-group">
+            <label for="households">Households</label>
+            <input type="number" step="any" id="households" name="households" placeholder="Households" required>
+        </div>
+
+        <div class="form-group">
+            <label for="median_income">Median Income (×10,000 USD)</label>
+            <input type="number" step="any" id="median_income" name="median_income" placeholder="Median Income" required>
+        </div>
+
+        <div class="form-group">
+            <label for="ocean_proximity">Ocean Proximity</label>
+            <select id="ocean_proximity" name="ocean_proximity" required>
+                <option value="">-- Select --</option>
+                <option value="<1H OCEAN">&lt;1H OCEAN</option> <!-- ✅ ADDED -->
+                <option value="INLAND">INLAND</option>
+                <option value="NEAR BAY">NEAR BAY</option>
+                <option value="NEAR OCEAN">NEAR OCEAN</option>
+                <option value="ISLAND">ISLAND</option>
+            </select>
+        </div>
+
+        <!-- Buttons -->
+        <div class="button-group">
+            <button type="submit">Predict</button>
+            <button type="button" id="clear-btn">Clear</button>
+        </div>
+
+    </form>
+
+    <!-- Result -->
+    <div id="result" style="margin-top:15px;">
+        Result will appear here
+    </div>
+
+</div>
+
+<script src="/static/script.js"></script>
+
+</body>
+</html>
