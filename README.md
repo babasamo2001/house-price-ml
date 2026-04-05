@@ -2,6 +2,8 @@
 
 A production-ready Machine Learning regression web application that predicts California house prices from structured housing features.
 
+Live Demo: https://house-price-ml-v0yg.onrender.com/
+
 This project demonstrates the complete ML lifecycle:
 
 Reproducible data loading (local + remote)
@@ -22,7 +24,7 @@ assets/ui.png
 Example prediction: $471,171.00 see assets/ui.png
 
 🚀 Project Highlights
-    Dataset
+Dataset
 California Housing Dataset
 20,640 rows, ~1.37 MB
 Numerical + categorical features
@@ -60,10 +62,10 @@ XGBoost Regressor
 Best model selected automatically using RMSE.
 
 📊 Current Performance
-Model	RMSE
-Linear Regression	~69,000
-Random Forest	~48,000
-XGBoost	~47,000 ✅ best
+Model RMSE
+Linear Regression ~69,000
+Random Forest ~48,000
+XGBoost ~47,000 ✅ best
 
 💾 Model Persistence
 
