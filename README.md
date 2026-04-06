@@ -4,6 +4,8 @@ A production-ready Machine Learning regression web application that predicts Cal
 
 Live Demo: https://house-price-ml-v0yg.onrender.com/
 
+The trained model is exposed through a Flask API and hosted on Render, allowing users to submit inputs through a web interface and receive real-time predictions.
+
 This project demonstrates the complete ML lifecycle:
 
 Reproducible data loading (local + remote)
