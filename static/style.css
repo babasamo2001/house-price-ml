@@ -121,3 +121,54 @@ input[type="number"]::-webkit-inner-spin-button {
 input[type="number"] {
     -moz-appearance: textfield;
 }
+
+@media (max-width: 768px) {
+
+    .container {
+        margin: 20px;
+        padding: 20px;
+    }
+
+    /* Reduce spacing for mobile */
+    .form-group {
+        margin-bottom: 12px;
+    }
+
+    /* Stack buttons nicely */
+    .button-group {
+        display: flex;
+        flex-direction: column;
+        gap: 10px;
+    }
+
+    button {
+        width: 100%;
+        font-size: 15px;
+    }
+
+    h2 {
+        font-size: 20px;
+    }
+
+    p {
+        font-size: 14px;
+    }
+}
+
+/* Extra small devices */
+@media (max-width: 480px) {
+
+    .container {
+        margin: 10px;
+        padding: 15px;
+    }
+
+    input, select {
+        font-size: 14px;
+        padding: 9px;
+    }
+
+    button {
+        padding: 10px;
+    }
+}

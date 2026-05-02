@@ -2,6 +2,7 @@
 <html lang="en">
 <head>
     <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>House Price Predictor</title>
     <link rel="stylesheet" href="/static/style.css">
 </head>
@@ -10,7 +11,7 @@
 
 <div class="container">
    <div class="header-section">
-    <h2>🏠 California House Price Prediction</h2>
+    <h2>California House Price Prediction</h2>
     <p>Enter house features to estimate the price based on California data.</p>
 </div>
 
@@ -60,7 +61,7 @@
             <label for="ocean_proximity">Ocean Proximity</label>
             <select id="ocean_proximity" name="ocean_proximity" required>
                 <option value="">-- Select --</option>
-                <option value="<1H OCEAN">&lt;1H OCEAN</option> <!-- ✅ ADDED -->
+                <option value="<1H OCEAN">&lt;1H OCEAN</option>
                 <option value="INLAND">INLAND</option>
                 <option value="NEAR BAY">NEAR BAY</option>
                 <option value="NEAR OCEAN">NEAR OCEAN</option>
@@ -68,7 +69,6 @@
             </select>
         </div>
 
-        <!-- Buttons -->
         <div class="button-group">
             <button type="submit">Predict</button>
             <button type="button" id="clear-btn">Clear</button>
@@ -76,7 +76,6 @@
 
     </form>
 
-    <!-- Result -->
     <div id="result" style="margin-top:15px;">
         Result will appear here
     </div>

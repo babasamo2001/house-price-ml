@@ -21,7 +21,7 @@ SKEWED_FEATURES = [
 ]
 
 def safe_log(X):
-    return np.log1p(np.maximum(X, 0))   # 👈 prevents negative issues
+    return np.log1p(np.maximum(X, 0))
 
 def build_preprocessor():
 
