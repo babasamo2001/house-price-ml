@@ -2,7 +2,7 @@ const form = document.getElementById("prediction-form");
 const resultDiv = document.getElementById("result");
 const clearBtn = document.getElementById("clear-btn");
 
-# Handle prediction
+// Handle prediction
 form.addEventListener("submit", async (e) => {
     e.preventDefault();
 
@@ -20,13 +20,13 @@ form.addEventListener("submit", async (e) => {
 
         const result = await response.json();
 
-        # Handle backend error
+        // Handle backend error
         if (result.error) {
             resultDiv.innerHTML = `<span style="color:red">${result.error}</span>`;
             return;
         }
 
-        # format price
+        // format price
         const formattedPrice = Number(result.prediction).toLocaleString(undefined, {
             minimumFractionDigits: 2,
             maximumFractionDigits: 2
@@ -39,7 +39,7 @@ form.addEventListener("submit", async (e) => {
     }
 });
 
-# Handle clear
+// Handle clear
 clearBtn.addEventListener("click", () => {
     form.reset();
     resultDiv.innerHTML = "Result will appear here";
