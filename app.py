@@ -4,7 +4,7 @@ from predict import make_prediction
 
 app = Flask(__name__)
 
-# Valid categories (matches your dataset + UI)
+# Valid categories
 VALID_CATEGORIES = [
     "<1H OCEAN", "INLAND", "NEAR OCEAN", "NEAR BAY", "ISLAND"
 ]
@@ -31,11 +31,7 @@ def predict():
         return jsonify({"error": str(e)})
 
 
-# -----------------------
-# Entry point for local or Render
-# -----------------------
 if __name__ == "__main__":
-    # Render sets PORT automatically; default to 10000 for local testing
+    # Start FastAPI
     port = int(os.environ.get("PORT", 10000))
-    # Bind to all interfaces so Render can reach it
     app.run(host="0.0.0.0", port=port, debug=True)
